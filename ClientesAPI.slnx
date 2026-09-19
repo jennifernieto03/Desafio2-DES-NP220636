@@ -1,3 +1,8 @@
 <Solution>
+  <Folder Name="/database/">
+    <File Path="database.sql" />
+  </Folder>
+  <Project Path="APIGateway/APIGateway.csproj" />
   <Project Path="ClientesAPI/ClientesAPI.csproj" />
+  <Project Path="PedidosAPI/PedidosAPI.csproj" />
 </Solution>

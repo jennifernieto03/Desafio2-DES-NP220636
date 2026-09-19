@@ -1,0 +1,173 @@
+﻿
+      {
+        "Routes": [
+
+          {
+            "UpstreamPathTemplate": "/gateway/clientes",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamPathTemplate": "/api/clientes",
+            "DownstreamScheme": "http",
+
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 7294
+              }
+            ],
+            "AuthenticationOptions": {
+              "AuthenticationProviderKeys": [ "Bearer" ]
+            }
+          },
+
+          {
+            "UpstreamPathTemplate": "/gateway/clientes",
+            "UpstreamHttpMethod": [ "POST" ],
+
+            "DownstreamPathTemplate": "/api/clientes",
+            "DownstreamScheme": "http",
+
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 7294
+              }
+            ],
+            "AuthenticationOptions": {
+              "AuthenticationProviderKeys": [ "Bearer" ]
+            }
+          },
+
+          {
+            "UpstreamPathTemplate": "/gateway/clientes/{id}",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamPathTemplate": "/api/clientes/{id}",
+            "DownstreamScheme": "http",
+
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 7294
+              }
+            ],
+            "AuthenticationOptions": {
+              "AuthenticationProviderKeys": [ "Bearer" ]
+            }
+          },
+
+          {
+            "UpstreamPathTemplate": "/gateway/clientes/{id}",
+            "UpstreamHttpMethod": [ "PUT" ],
+
+            "DownstreamPathTemplate": "/api/clientes/{id}",
+            "DownstreamScheme": "http",
+
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 7294
+              }
+            ],
+            "AuthenticationOptions": {
+              "AuthenticationProviderKeys": [ "Bearer" ]
+            }
+          },
+
+          {
+            "UpstreamPathTemplate": "/gateway/clientes/{id}",
+            "UpstreamHttpMethod": [ "DELETE" ],
+
+            "DownstreamPathTemplate": "/api/clientes/{id}",
+            "DownstreamScheme": "http",
+
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 7294
+              }
+            ],
+            "AuthenticationOptions": {
+              "AuthenticationProviderKeys": [ "Bearer" ]
+            }
+          },
+
+          {
+            "UpstreamPathTemplate": "/gateway/pedidos",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamPathTemplate": "/api/pedidos",
+            "DownstreamScheme": "http",
+
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 7086
+              }
+            ],
+            "AuthenticationOptions": {
+              "AuthenticationProviderKeys": [ "Bearer" ]
+            }
+          },
+
+          {
+            "UpstreamPathTemplate": "/gateway/pedidos",
+            "UpstreamHttpMethod": [ "POST" ],
+
+            "DownstreamPathTemplate": "/api/pedidos",
+            "DownstreamScheme": "http",
+
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 7086
+              }
+            ],
+            "AuthenticationOptions": {
+              "AuthenticationProviderKeys": [ "Bearer" ]
+            }
+          },
+
+          {
+            "UpstreamPathTemplate": "/gateway/pedidos/{id}",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamPathTemplate": "/api/pedidos/{id}",
+            "DownstreamScheme": "http",
+
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 7086
+              }
+            ],
+            "AuthenticationOptions": {
+              "AuthenticationProviderKeys": [ "Bearer" ]
+            }
+          },
+
+          {
+            "UpstreamPathTemplate": "/gateway/pedidos/cliente/{clienteId}",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamPathTemplate": "/api/pedidos/cliente/{clienteId}",
+            "DownstreamScheme": "http",
+
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 7086
+              }
+            ],
+            "AuthenticationOptions": {
+              "AuthenticationProviderKeys": [ "Bearer" ]
+            }
+          }
+        ],
+
+        "GlobalConfiguration": {
+          "BaseUrl": "http://localhost:7180"
+        }
+      }
+    
+

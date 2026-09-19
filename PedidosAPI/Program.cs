@@ -1,4 +1,4 @@
-using ClientesAPI.Data;
+using PedidosAPI.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,9 +9,15 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddDbContext<ClientesDbContext>(options =>
+builder.Services.AddDbContext<PedidosDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddHttpClient("ClientesAPI", client =>
+{
+    client.BaseAddress = new Uri(
+        builder.Configuration["Services:ClientesApi"]!);
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
